@@ -55,7 +55,7 @@ public class Bullet : Attack
     void SurchEnemy()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        Vector3 PlayerPos = GameManager.instance.player.transform.position;
+        Vector3 PlayerPos = GameManager.Instance.player.transform.position;
         GameObject nullEnemy = null;
         for (int i = 0; i < enemies.Length; i++)
         {

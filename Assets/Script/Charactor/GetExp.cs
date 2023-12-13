@@ -21,7 +21,7 @@ public class GetExp : MonoBehaviour
 
         PlayerController player = collision.transform.GetComponent<PlayerController>();
 
-        Vector3 PlayerPos = GameManager.instance.player.transform.position;
+        Vector3 PlayerPos = GameManager.Instance.player.transform.position;
         Vector3 ExpPos = transform.position;
 
         Vector3 dir = PlayerPos - ExpPos;

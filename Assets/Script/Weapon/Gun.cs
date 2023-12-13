@@ -70,11 +70,11 @@ public class Gun : MonoBehaviour
         //ÃÑ¾Ë °ø°Ý·Â
         bullet.attackDamage = damage;
         //ÃÑ¾Ë ½ºÇÇµå
-        bullet.bulletSpeed = speed * GameManager.instance.player.BulletSpeed;
+        bullet.bulletSpeed = speed * GameManager.Instance.player.BulletSpeed;
         //ÄðÅ¸ÀÓ
-        fireTime = 1 - coolTime * GameManager.instance.player.CoolTime;
+        fireTime = 1 - coolTime * GameManager.Instance.player.CoolTime;
         //ÃÑ¾Ë ¼ö
-        count = bulletcount + GameManager.instance.player.Projectile;
+        count = bulletcount + GameManager.Instance.player.Projectile;
         //¹ß»ç µô·¹ÀÌ
         countdown += Time.deltaTime;
         if (fireTime < countdown)

@@ -16,7 +16,7 @@ public class Attack : MonoBehaviour
 
     private void Start()
     {
-        player = GameManager.instance.player;
+        player = GameManager.Instance.player;
     }
 
     public virtual void OnTriggerEnter2D(Collider2D collision)

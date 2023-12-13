@@ -47,8 +47,8 @@ public class Shovel : Attack
     void Awake()
     {
         list = new List<GameObject>();
-        destroyTime = enable + 10 + GameManager.instance.player.Duration;
-        count = 2 + GameManager.instance.player.Projectile;
+        destroyTime = enable + 10 + GameManager.Instance.player.Duration;
+        count = 2 + GameManager.Instance.player.Projectile;
     }
 
 
@@ -97,7 +97,7 @@ public class Shovel : Attack
     //쿨타임 및 지속시간
     private void Update()
     {
-        transform.Rotate(Vector3.back * turnSpeed * Time.deltaTime * GameManager.instance.player.BulletSpeed);
+        transform.Rotate(Vector3.back * turnSpeed * Time.deltaTime * GameManager.Instance.player.BulletSpeed);
 
         if (hasShovel)
         {
@@ -131,7 +131,7 @@ public class Shovel : Attack
         for (int index = 0; index < count; index++)
         {
             //삽 크기
-            Range = GameManager.instance.player.AttackRange;
+            Range = GameManager.Instance.player.AttackRange;
             //삽 생성
             bullet = Instantiate(shovel, transform.position, Quaternion.identity);
             //삽의 크기
@@ -143,7 +143,7 @@ public class Shovel : Attack
             //어택 스크립트 가져오기
             Attack attack = bullet.GetComponent<Attack>();
             //삽 공격력
-            attack.attackDamage = damage * GameManager.instance.player.AttackDamage;
+            attack.attackDamage = damage * GameManager.Instance.player.AttackDamage;
             //생성한 삽을 자식으로 가져오기
             bullet.transform.parent = transform;
             //삽을 플레이어 중심으로 360/count 위치에 두기

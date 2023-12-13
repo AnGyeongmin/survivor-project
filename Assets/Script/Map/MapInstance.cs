@@ -10,12 +10,12 @@ public class MapInstance : MonoBehaviour
         if (!collision.CompareTag("Area"))
             return;
 
-        Vector3 PlayerPos = GameManager.instance.player.transform.position;
+        Vector3 PlayerPos = GameManager.Instance.player.transform.position;
         Vector3 TilePos = transform.position;
         float diffx = Mathf.Abs(TilePos.x - PlayerPos.x);
         float diffy = Mathf.Abs(TilePos.y - PlayerPos.y);
 
-        Vector3 PlayerVec = GameManager.instance.player.rb.velocity;
+        Vector3 PlayerVec = GameManager.Instance.player.rb.velocity;
         float dirx = PlayerVec.x < 0 ? -1 : 1;
         float diry = PlayerVec.y < 0 ? -1 : 1;
 

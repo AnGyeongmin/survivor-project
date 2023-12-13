@@ -93,7 +93,7 @@ public class Enemy : Damageable
     public override void TakeDamage(float damage, Vector2 knockback)
     {
         base.TakeDamage(damage, knockback);
-        RealHealth -= damage * GameManager.instance.player.AttackDamage;
+        RealHealth -= damage * GameManager.Instance.player.AttackDamage;
 
         animator.SetTrigger("HitTrigger");
 
@@ -109,11 +109,11 @@ public class Enemy : Damageable
 
     public void State()
     {
-        if (GameManager.instance.timer.stageLevel > 0)
+        if (GameManager.Instance.timer.stageLevel > 0)
         {
-            MaxHealth = MaxHealth * GameManager.instance.timer.stageLevel;
-            moveSpeed = moveSpeed * GameManager.instance.timer.stageLevel * 0.2f;
-            attack.attackDamage = attack.attackDamage * GameManager.instance.timer.stageLevel * 0.5f;
+            MaxHealth = MaxHealth * GameManager.Instance.timer.stageLevel;
+            moveSpeed = moveSpeed * GameManager.Instance.timer.stageLevel * 0.2f;
+            attack.attackDamage = attack.attackDamage * GameManager.Instance.timer.stageLevel * 0.5f;
         }
     }
 
@@ -134,8 +134,8 @@ public class Enemy : Damageable
         if (IsDeath && DropRand > 5)
         {
             random = Random.Range(1, 200);
-            GameManager.instance.spawner.pool[random].transform.position = transform.position;
-            GameManager.instance.spawner.pool[random].SetActive(true);
+            GameManager.Instance.spawner.pool[random].transform.position = transform.position;
+            GameManager.Instance.spawner.pool[random].SetActive(true);
         }
     }
 }

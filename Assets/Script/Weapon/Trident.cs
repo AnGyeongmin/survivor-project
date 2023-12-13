@@ -63,9 +63,9 @@ public class Trident : Attack
         //창의 스크립트 가져오기
         ShootTrident trident = Tridents.GetComponent<ShootTrident>();
         //공격력
-        trident.attackDamage = damage * GameManager.instance.player.AttackDamage;
-        trident.tridentSpeed = speed * GameManager.instance.player.BulletSpeed;
-        count = tridentCount + GameManager.instance.player.Projectile;
+        trident.attackDamage = damage * GameManager.Instance.player.AttackDamage;
+        trident.tridentSpeed = speed * GameManager.Instance.player.BulletSpeed;
+        count = tridentCount + GameManager.Instance.player.Projectile;
         countdown += Time.deltaTime;
         if (fireTime < countdown)
         {
